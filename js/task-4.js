@@ -8,9 +8,11 @@ form.addEventListener('submit', event => {
     if (email === "" || password === "") {alert('All form fields must be filled in');}
     else{
         const userInfo = {};
-        userInfo['email'] = email
-        userInfo['password'] = password
-        console.log(userInfo)
+        email.trim();
+        password.trim();
+        userInfo['email'] = email;
+        userInfo['password'] = password;
+        console.log(userInfo);
         form.reset();
     }
 });
